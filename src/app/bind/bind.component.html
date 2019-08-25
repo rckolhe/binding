@@ -1,0 +1,16 @@
+<h1>Enter Your Blogs:</h1>
+<div>
+    <textarea cols="50" rows="7" [(ngModel)]="blogtext"></textarea>
+    <br><br>
+    <button (click)="submitBlog()">Submit</button>
+    <br><br>
+</div>
+    <h1 *ngIf="blogList.length > 0">Blogs</h1>
+    <ul>
+        <li *ngFor="let blogs of blogList let i = index">
+            {{blogs}}   &nbsp;&nbsp;&nbsp;
+            <button  (click)="deleteBlog(i)">Delete</button>
+            <br><br>  
+        </li>
+    </ul>
+
